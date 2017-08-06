@@ -25,9 +25,9 @@
         tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/opcao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/opc"
+        android:layout_width="73dp"
+        android:layout_height="21dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -35,22 +35,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="8dp"
+        app:layout_constraintVertical_bias="0.533" />
 
     <EditText
         android:id="@+id/texto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="259dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:inputType="number|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/opcao"
+        app:layout_constraintStart_toEndOf="@+id/opc"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <!-- Mudei as constraints dos buttons, eles não estavam apontando pros lugares corretos, por exemplo o ALTERAR
     estava apontando pra esquerda do TextView Opção e não para a esquerda do layout. -->

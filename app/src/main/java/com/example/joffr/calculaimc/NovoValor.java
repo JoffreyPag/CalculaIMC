@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NovoValor extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class NovoValor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_valor);
-        tv = (TextView) findViewById(R.id.opcao);
+        tv = (TextView) findViewById(R.id.opc);
         Bundle b = new Bundle();
         tipe = b.getBoolean("tipo");
         if (tipe) {
