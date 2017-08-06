@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void  Calcular(View v){
-        if(peso <= 1){
-            if(altura <= 1){
+        if(peso >= 1){
+            if(altura >= 1){
                 imc = peso / altura*altura;
                 if(imc < 16){
                     res.setText("Magreza Grave");
