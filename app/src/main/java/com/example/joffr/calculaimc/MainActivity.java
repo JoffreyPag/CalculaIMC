@@ -9,8 +9,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    double peso = 0, altura = 0;
-    TextView tp, ta;
+    double peso = 0, altura = 0, imc = 0;
+    TextView tp, ta, res;
     final static int NOVOPESO = 1, NOVAALTURA = 2;
 
     @Override
@@ -19,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tp = (TextView) findViewById(R.id.pesoValor);
         ta = (TextView) findViewById(R.id.alturaValor);
+        res = (TextView)findViewById(R.id.resultado);
         tp.setText(String.valueOf(peso));
         ta.setText(String.valueOf(altura));
+        res.setText("Aperte o botão para calcular");
     }
 
     public void ClickPeso(View v) {
@@ -39,6 +41,35 @@ public class MainActivity extends AppCompatActivity {
         i.putExtras(b);
 
         startActivityForResult(i, NOVAALTURA);
+    }
+
+    public void  Calcular(View v){
+        if(peso <= 1){
+            if(altura <= 1){
+                imc = peso / altura*altura;
+                if(imc < 16){
+                    res.setText("Magreza Grave");
+                }else if(imc >= 16 && imc <17){
+                    res.setText("Magreza Moderada");
+                }else if(imc >= 17 && imc < 18.5){
+                    res.setText("Magreza Leve");
+                }else if(imc >= 18.5 && imc < 25){
+                    res.setText("Saudavel");
+                }else if(imc >= 25 && imc < 30){
+                    res.setText("Sobrepeso");
+                }else if(imc >= 30 && imc < 35){
+                    res.setText("Obesidade Grau I");
+                }else if(imc >= 35 && imc < 40){
+                    res.setText("Obesidade Grau II");
+                }else if(imc >= 40){
+                    res.setText("Obesidade Grau III (Mórbida)");
+                }
+            } else{
+                Toast.makeText(this, "não existe altura 0 amigão",Toast.LENGTH_SHORT);
+            }
+        } else{
+            Toast.makeText(this, "Mesmo que você se chame Hélio você não é mais leve que o ar!", Toast.LENGTH_SHORT);
+        }
     }
 
     @Override
