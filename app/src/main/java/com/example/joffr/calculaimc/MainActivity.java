@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     res.setText("Obesidade Grau III (Mórbida)");
                 }
             } else{
-                Toast.makeText(this, "não existe altura 0 amigão",Toast.LENGTH_SHORT);
+                Toast.makeText(this, "não existe altura 0 amigão",Toast.LENGTH_SHORT).show();
             }
         } else{
-            Toast.makeText(this, "Mesmo que você se chame Hélio você não é mais leve que o ar!", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Mesmo que você se chame Hélio você não é mais leve que o ar!", Toast.LENGTH_SHORT).show();
         }
     }
 
