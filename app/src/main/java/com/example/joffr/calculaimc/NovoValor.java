@@ -20,7 +20,7 @@ public class NovoValor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_valor);
         tv = (TextView) findViewById(R.id.opc);
-        Bundle b = new Bundle();
+        Bundle b = getIntent().getExtras();
         tipe = b.getBoolean("tipo");
         if (tipe) {
             tv.setText(R.string.peso_titulo);
