@@ -52,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 Aqui estou pegando o valor direto da Intent e não de um bundle, pois não achei necessário.
                 Se tivesse um bundle: i.getBundle.getStringExtra("novoValor");*/
                 Intent i = data;
-                String novo = i.getStringExtra("novoValor");
-                double nonovo = Double.parseDouble(novo);
+                //String novo = i.getStringExtra("novoValor");
+                //double nonovo = Double.parseDouble(novo);
+                double novo = Double.parseDouble(i.getStringExtra("novoValor"));
                 //É melhor você fazer dessa forma a baixo, no mínimo é mais bonito.
-                tp.setText(String.valueOf(nonovo));
+                tp.setText(String.valueOf(novo));
             } else if (requestCode == NOVAALTURA) {
                 Toast.makeText(this, "ok né?", Toast.LENGTH_SHORT).show();
                 Intent i = data;
